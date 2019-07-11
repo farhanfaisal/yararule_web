@@ -1,0 +1,5 @@
+include "./detect_obfuscation.yar"
+include "./detect_webshell.yar"
+include "./detect_phpmailer.yar"
+include "./detect_small_malicios.yar"
+include "./detect_small_uploader.yar"
