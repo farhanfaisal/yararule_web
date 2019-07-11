@@ -21,4 +21,4 @@ It did detect
 
 ## Broad scan (not precise, just to list down interesting obfucated code)
 
-```yara -r -w ./detect_generic_maliciousness_BROAD_SCAN.yar <path>
+```yara -r -w ./detect_generic_maliciousness_BROAD_SCAN.yar <path>```
