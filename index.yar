@@ -1,4 +1,5 @@
 include "./detect_blacklist_keyword.yar"
+include "./detect_exploiter.yar"
 include "./detect_filemanager.yar"
 include "./detect_obfuscation.yar"
 include "./detect_phpmailer.yar"
