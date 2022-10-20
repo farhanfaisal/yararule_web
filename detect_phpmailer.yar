@@ -1,13 +1,13 @@
 rule phpMailer_Real_Leaf_phpMailer {
-    meta:
-        description = "phpMailer - Real Leaf phpMailer"
-        author = "Farhan Faisal"
-        date = "2018/07/19"
-        score = 60
-    strings:
-        $s1 = "leafmailer.pw"
-    condition:
-        $s1
+      meta:
+          description = "phpMailer - Real Leaf phpMailer"
+          author = "Farhan Faisal"
+          date = "2018/07/19"
+          score = 60
+      strings:
+          $s1 = "leafmailer.pw"
+      condition:
+          $s1
 }
 
 
