@@ -372,34 +372,3 @@ rule Obfuscation_GENERIC_small_hex_____________2KB {
 	condition:
 		#s1 > 20 and filesize < 2KB and not (any of ($n*))
 }
-
- 
-
-
-
-rule Obfuscation_GENERIC_PHP_hexadecimal_encoding {
-	meta:
-		description = "Hexadecimal encoding found"
-        author = "Farhan Faisal"
-        date = "2021/06/29"
-        score = 60
-        hash = ""
-	strings:
-		$s1 = /\\x[a-zA-Z0-9]{2}/
-		$m1 = "<?php"
-
-		$n1 = "\\x00\\x00\\x00\\x00\\x00"
-		$n2 = /(Swift_CharacterReader_Utf8Reader|PHPUnit_Extensions_Selenium2TestCase_Keys|Symfony\\Component\\Yaml)/
-
-		$nn1 = "\\x00"
-		$nn2 = "\\xEE"
-	condition:
-		#s1 > 60 and $m1 and (not any of ($n*)) and (not #nn1 > 10) and (not #nn2 > 2)
-}
-
-
-/*
-		\x4c\x4fB\x41\x4c\x53
-		G\x4cO\x42\x41\x4cS
-		Base64    $a = /([A-Za-z0-9+\/]{4}){3,}([A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?/ 		 
-*/
