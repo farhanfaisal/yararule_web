@@ -151,7 +151,7 @@ rule Obfuscation_Webshell_Unknown_1 {
 		filesize < 30KB and (#xx1 > 3) and (all of ($s*)) and not (any of ($zz*)) and $obs1
 }
 /*
-	this is the difficult one. Not much pattern to search for, except base64, which makeit slow. 
+	this is the difficult one. Not much pattern to search for, except base64, which makeit slow.
 	sample in sample_heavily_obfuscated/cache-hsjwqftqbcdhfogq.php.suspected
 */
 
@@ -183,7 +183,7 @@ rule Obfuscation_no_detectable_Call_base64_n_encoding {
 				magic.mime_type() == "text/x-c++"
 				)*/
 		/* and not (any of ($xx*)) */
-} 
+}
 /* TOO MANY FALSE POSITIVE */
 
 
@@ -298,7 +298,7 @@ rule Obfuscation_GENERIC_substitution_____webshell {
 		$n4 = "icensing"
 	condition:
 		filesize < 2200 and (#s1 > 40 or #s2 > 41 or #s3 > 40) and $s4 and $s5 and not (any of ($n*))
-} 
+}
 		/*$s1 = /[a-zA-Z0-9]{2,20}\[[0-9]{1,3}\]/
 		$s2 = /[a-zA-Z0-9]{2,20}\{[0-9]{1,3}\}/
 		$s3 = /[a-zA-Z0-9]{2,20}\([0-9]{1,3}\)/*/
@@ -339,7 +339,7 @@ rule Obfuscation_GENERIC_tiny_shell_PHP_2______2KB {
         condition:
         	(filesize < 2KB) and (all of ($m*)) and (1 of ($s*))  and (not any of ($x*))
         	and
-        	( 
+        	(
         		#P1 > 10 or
         		#P2 > 9 or
         		#P3 > 15 or
