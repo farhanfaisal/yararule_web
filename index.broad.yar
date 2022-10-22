@@ -1,11 +1,11 @@
+include "./detect_pattern.yar"
 include "./detect_blacklist_keyword.yar"
 include "./detect_exploiter.yar"
 include "./detect_filemanager.yar"
-include "./detect_html_js.yar"
+include "./detect_html_js.yar
 include "./detect_obfuscation.yar"
 include "./detect_phpmailer.yar"
 include "./detect_small_malicios.yar"
 include "./detect_small_uploader.yar"
 include "./detect_small_injector.yar"
 include "./detect_webshell.yar"
-

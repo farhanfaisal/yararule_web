@@ -17,7 +17,17 @@ It did detect
 
 ## Usage 
 
+General scan
 ```yara -r -w ./index.yar <path to scan> ```
+
+Broad scan (more false positive. looking for generic obfuscated code)
+```yara -r -w ./index.broad.yar <path to scan> ```
+
+## Notes
+
+Some detections are important, such as shellcode detction, but most of them are string search. So, there will be a lot of false positive. However, the rule will be name with "GENERIC". 
+
+Those files need further investigation. 
 
 ## Broad scan (not precise, just to list down interesting obfucated code)
 
